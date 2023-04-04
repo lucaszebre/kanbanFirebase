@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from '../styles/BoardColumn.module.css';
+import { useTheme } from '@/contexts/themecontext';
 
 interface BoardColumnProps {
   title: string;
@@ -12,7 +13,8 @@ interface BoardColumnProps {
 
 const BoardColumn: React.FC<BoardColumnProps> = ({ title, onChange, Remove, resetKey,error }) => {
   const [inputValue, setInputValue] = React.useState<string>(title);
-  
+  const { theme, setTheme } = useTheme();
+
     React.useEffect(() => {  // every time the value of resetkey change we reset the value inside the input 
       if(resetKey){
         setInputValue('');
@@ -27,11 +29,14 @@ const BoardColumn: React.FC<BoardColumnProps> = ({ title, onChange, Remove, rese
     onChange(newValue);
   };
 
+
   return (
     <>
     <div className={styles.BoardColumnDiv}>
       <input
-        className={`${styles.BoardColumnImput} ${error ? styles.InputError : ''}`}
+        className={`${styles.BoardColumnImput} ${
+          theme === 'light' ? styles.light : styles.dark
+          } ${error ? styles.InputError : ''}`}
         type="text"
         value={inputValue}
         onChange={handleInputChange}

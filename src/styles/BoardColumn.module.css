@@ -8,13 +8,20 @@
     
 }
 
+.dark{
+    color: white;
+}
+
+.light{
+    color: black;
+}
+
 .BoardColumnImput{
     width: 92%;
     height: 40px;
     border: gray 1px solid;
     border-radius: 0.5rem;
     background-color: transparent;
-    color: white;
     font-size: 1.2rem;
     font-weight: 600;
     padding: 0 1rem;
