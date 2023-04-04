@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import useAuthState from './useAuthState';
 import { KanbanContext } from '@/contexts/sidebarcontext';
 import { Opencontext } from '@/contexts/contextopen';
-import styles from '../styles/Sidebar.module.css';
+import styles from '@/styles/Sidebar.module.css';
 import Image from 'next/image';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '@/config/firebase';

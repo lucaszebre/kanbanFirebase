@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Subtasks.module.css';
+import styles from '@/styles/Subtasks.module.css';
 import { DataContext } from '@/contexts/datacontext';
 import { useContext } from 'react';
 import { useTheme } from '@/contexts/themecontext';

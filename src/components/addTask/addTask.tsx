@@ -1,7 +1,7 @@
 import React, { useState , useEffect } from 'react';
 import { Opencontext } from '@/contexts/contextopen';
 import { useContext } from 'react';
-import styles from '../../styles/AddTask.module.css';
+import styles from '@/styles/AddTask.module.css';
 import { createTask } from '@/utils/createTask';
 import { DataContext } from '@/contexts/datacontext';
 import { ColumnData } from '@/types';
