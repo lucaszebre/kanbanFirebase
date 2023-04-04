@@ -7,7 +7,7 @@ import styles from '../styles/Sidebar.module.css';
 import Image from 'next/image';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '@/config/firebase';
-import { Switch, SwitchProps } from '@chakra-ui/react';
+import { Switch } from '@chakra-ui/react';
 import BoardCart from './boardCart';
 import { DataContext } from '@/contexts/datacontext';
 import { Board } from '@/types';
@@ -30,7 +30,7 @@ const Sidebar = () => {
     isMoving
     } = useContext(DataContext);
 
-    const handleThemeToggle: SwitchProps['onChange'] = (event) => {
+    const handleThemeToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
       setTheme(event.target.checked ? 'light' : 'dark');
     };
     
