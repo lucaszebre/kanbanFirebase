@@ -13,6 +13,7 @@ import { DataContext } from '@/contexts/datacontext';
 import { Board } from '@/types';
 import { getInitialWindowWidth } from '@/utils/GetInitialWidth';
 import { useTheme } from '@/contexts/themecontext';
+import { Switch as MuiSwitch } from '@mui/material';
 
 const Sidebar = () => {
 const { theme, setTheme } = useTheme();
@@ -74,6 +75,9 @@ const {
     fetchBoards();
     }, [user, setBoards, boards,isMoving]);
 
+    const handleThemeToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setTheme(event.target.checked ? 'light' : 'dark');
+        };
 
   // function to handle the click on a board cart 
 const handleBoardClick = (boardName: string, boardId: string) => {
@@ -123,7 +127,12 @@ const handleBoardClick = (boardName: string, boardId: string) => {
                         theme === 'light' ? styles.light : styles.dark
                         }`} >
                         <Image src="/assets/icon-dark-theme.svg" alt="icon-dark-theme" width={18.33} height={18.33} />
-                        <Switch size="lg" colorScheme="gray" />
+                        <MuiSwitch
+                        size="medium"
+                        color="default"
+                        checked={theme !== 'dark'}
+                        onChange={handleThemeToggle}
+                        />                        
                         <Image src="/assets/icon-light-theme.svg" alt="icon-light-theme" width={15} height={15} />
                     </div>
 
