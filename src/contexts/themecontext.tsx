@@ -20,7 +20,7 @@ interface ThemeProviderProps {
     children: ReactNode;
 }
 
-export const ThemeProvider = (props: ThemeProviderProps) => {
+export const ThemeProvidered = (props: ThemeProviderProps) => {
     const [theme, setTheme] = useState<string>('light');
 
 useEffect(() => {
