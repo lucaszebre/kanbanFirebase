@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import useAuthState from '@/components/useAuthState';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '@/config/firebase';
-import { Column, Subtask ,Board} from '@/components/editBoard/editBoard';
+import { Column, Subtask ,Board} from '@/types/index';
 import {fetchColumnsFromFirestore} from '@/utils/fetchColumns'
 type openedTaskType= {
     id: string;
