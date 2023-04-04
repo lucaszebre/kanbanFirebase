@@ -1,5 +1,5 @@
 import { doc, getDoc } from "firebase/firestore";
-import { Board } from "@/components/editBoard/editBoard";
+import { Board } from "@/types";
 import { fetchColumnsFromFirestore } from "./fetchColumns";
 import { db } from "@/config/firebase";
 

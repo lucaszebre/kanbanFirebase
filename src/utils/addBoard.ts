@@ -1,6 +1,6 @@
 import { db, auth } from "@/config/firebase";
 import { addDoc, collection } from "firebase/firestore";
-import { Column,Board } from "@/components/editBoard/editBoard";
+import { Column,Board } from "@/types";
 export const AddBoardToFirestore = async (
     boardName: string,
     columnNames: string[],

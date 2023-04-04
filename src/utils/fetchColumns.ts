@@ -1,6 +1,6 @@
 import {collection, getDocs, doc} from "firebase/firestore";
 import { db } from "@/config/firebase";
-import { Task, Subtask, Column } from "@/components/editBoard/editBoard";
+import { Task, Subtask, Column } from "@/types";
 
 export const fetchColumnsFromFirestore = async (boardId: string) => {
     const columnsCollection = collection(db, "boards", boardId, "columns");
