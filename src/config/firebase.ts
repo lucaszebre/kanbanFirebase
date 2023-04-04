@@ -5,13 +5,12 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAZtgWCYP_vMHzL9IoK2QQRvJOSga0GCbw",
-  authDomain: "kanbatask2.firebaseapp.com",
-  databaseURL: "https://kanbatask2-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "kanbatask2",
-  storageBucket: "kanbatask2.appspot.com",
-  messagingSenderId: "599370732411",
-  appId: "1:599370732411:web:551c51f92976b3e29923de"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Check if the app has been initialized, and if not, initialize it.
