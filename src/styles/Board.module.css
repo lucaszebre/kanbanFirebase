@@ -1,0 +1,60 @@
+.AppContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.BoardWrapper{
+    width: 100VW;
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    overflow: scroll;
+    min-height: 100vh;
+}
+
+.BoardDiv{
+    display:flex;
+    flex-direction: row;
+   width: 100%;
+    height: 100%;
+}
+
+.HeaderBoard{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.SideContainer{
+    position: relative;
+    width: 304px;
+    height: 100%;
+}
+
+.AddColumn{
+    margin-left: 1em;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 39px;
+    min-width: 280px;
+    color: #828fa3;
+}
+
+.dark{ 
+    background: linear-gradient(180deg,rgba(43,44,55,.25),rgba(43,44,55,.125));
+}
+
+.light{
+    background-color: #E4EBFA;
+}
+
+@media (max-width:767px){
+    .SideContainer{
+        display:none
+    }
+}

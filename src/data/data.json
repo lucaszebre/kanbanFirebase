@@ -1,0 +1,37 @@
+    {
+        "boards": [
+        {
+            "name": "Platform Launch",
+            "id": "1",
+            "columns": [
+            {
+                "name": "Todo",
+                "id": "2",
+                "tasks": [
+                {
+                    "title": "Build UI for onboarding flow",
+                    "description": "",
+                    "status": "Todo",
+                    "id":"3",
+                    "subtasks": [
+                    {
+                        "title": "Sign up page",
+                        "isCompleted": true,
+                        "id":"4"
+                    },
+                    {
+                        "title": "Sign in page",
+                        "isCompleted": false,
+                        "id":"5"
+                    },
+                    {
+                        "title": "Welcome page",
+                        "isCompleted": false,
+                        "id":"6"
+                    }
+                    ]
+                }
+                ]
+            }]
+        }]
+    }

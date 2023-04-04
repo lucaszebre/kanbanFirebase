@@ -1,0 +1,109 @@
+
+
+
+.DeleteThisTaskWrapper{
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.DeletethisTaskDiv{
+    display: flex;
+    width: 480px;
+    height: 229px;
+    
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+}
+
+.dark{
+    background-color: #2B2C37;
+}
+
+
+.light{
+    background-color: white;
+}
+
+
+
+
+.DeleteThisTaskTitle{
+    font-size: 1.5rem;
+    color: red;
+    margin-bottom: 1rem;
+}
+
+.DeleteThisTaskText{
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 1rem;
+    text-align: start;
+}
+.DeleteThisSpan{
+    color: white;
+}
+.DeleteThisTaskButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.DeleteButton{
+    background-color: #EA5555;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    width: 200px;
+}
+.DeleteButton:hover{
+    background-color: #FF9898;
+}
+
+.CancelButton{
+    background-color: aliceblue;
+    color: #635FC7;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    width: 200px;
+}
+@media screen  and (max-width:550px){
+    .DeletethisTaskDiv{
+        width: 90%;
+        height: auto;
+    }
+    .DeleteThisBoardButtons{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .DeleteButton{
+        width: 100%;
+    }
+    .CancelButton{
+        width: 100%;
+    }
+    .DeleteThisTaskButtons{
+        width: 100%;
+    }
+}

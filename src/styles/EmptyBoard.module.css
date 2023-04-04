@@ -1,0 +1,41 @@
+.emptyBoardDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+    position: fixed;
+}
+
+
+.emptyBoardTitle{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.emptyBoardButton{
+    background-color: #635FC7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 174px;
+    height: 48px;
+}
+
+
+@media (max-width:767px){
+    .emptyBoardTitle{
+        font-size: 10px
+}
+}

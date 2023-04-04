@@ -1,0 +1,140 @@
+@media (min-width:767px){
+    .SidebarContainer{
+        display: none;
+    }
+}
+
+
+.SidebarContainer{
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 90px;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark{
+    background-color: #2B2C37;
+
+}
+
+.dark .ToggleBlock{
+    background: #20212C;
+}
+
+.dark .CreateBoard:hover{
+    background: white;
+    border-radius: 0 100px 100px 0;
+    color: #635fc7;
+}
+
+
+.light{
+    background-color: #fff;
+
+}
+
+.light .ToggleBlock{
+    background: #f4f7fd;
+}
+
+.light .CreateBoard:hover{
+        background: rgba(99,95,199,.1);
+        border-radius: 0 100px 100px 0;
+        color: #635fc7;
+}
+
+
+.SibebarWrapper{
+    width: 90%;
+    max-height: 90%;
+    height: auto;
+    border-radius: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(54,78,126,.25);
+    color: #828fa3;
+    padding: 16px 0;
+}
+
+.CreateBoard{
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 24px;
+    padding: 15px 24px;
+    transition: .3s;
+    margin-left: -.2rem;
+
+}
+
+
+
+
+
+.CreateBoardText{
+    color: #635FC7;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.HideSideBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #828FA3;
+    cursor: pointer;
+}
+
+.SideBarBottom,.SideBarTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+    width: 100%;}
+
+    .ToggleBlock{
+        padding: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom:1em;
+    }
+
+    .HideItems{
+        margin-right: 0.5em;
+    }
+    .SideRow{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+.ligth .SideBarTitle{
+    color: black;
+}
+
+.dark .SideBarTitle{
+    color: white;
+}
+    .SideBarTitle{
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    line-height: 15px;
+    margin: 0 0 24px 19px;
+}
+
+

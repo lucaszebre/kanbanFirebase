@@ -1,0 +1,222 @@
+
+.AddTaskWrapper{
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark{
+    background-color: #2B2C37;
+}
+.dark .AddTaskTitle{
+    color: white;
+}
+
+.dark .AddTaskTextArea{
+    color: white;
+}
+.dark .SelectAddTask{
+    color: white;
+}
+.light{
+    background-color: white;
+}
+
+.light .AddTaskTitle{
+    color: black;
+}
+
+.light .AddTaskTextArea{
+    color: black;
+}
+.light .SelectAddTask{
+    color: black;
+}
+.AddTaskBlock{
+    width: 480px;
+    overflow: overlay;
+    border-radius: 6px;
+    max-height: 90%;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    z-index: 15;
+}
+
+.AddTaskTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.AddTaskSaveButton{
+    width: 100%;
+    height: 3rem;
+    background-color: #3F51B5;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.AddTaskSaveButton:hover{
+    background-color: #303F9F;
+}
+
+.AddTaskTextArea{
+    width: 100%;
+    height: 100%;
+    border: gray 1px solid;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.SelectAddTask{
+    width: 100%;
+    border: gray 1px solid;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    height: 40px;
+}
+.dark .AddTaskAddOption{
+    color:white;
+    background-color: #2B2C37;
+
+}
+
+
+.light .AddTaskAddOption{
+    color: black;
+    background-color: aliceblue;
+}
+
+
+.AddTaskForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.light .AddTaskLabel{
+    color: black;
+}
+
+.dark .AddTaskLabel{
+    color: white;
+}
+.AddTaskLabel{
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.light .AddTaskInput{
+    color: black;
+}
+
+.dark .AddTaskInput{
+    color: white;
+}
+
+.AddTaskInput{
+    width: 100%;
+    border: gray 1px solid;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: white;
+    height: 40px;
+}
+
+.InputAddTask:focus{
+    outline: none;
+}
+.light .TextAreaAddTask{
+    color: black;
+}
+
+.dark .TextAreaAddTask{
+    color: white;
+}
+.TextAreaAddTask{
+    width: 100%;
+    height: 100%;
+    border: gray 1px solid;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.dark .SelectAddTask{
+    background-color: #2B2C37;
+    color: white;
+}
+
+.light .SelectAddTask{
+    background-color: white;
+    color: black;
+}
+.SelectAddTask{
+    width: 100%;
+    height: 3rem;
+    border: gray 1px solid;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: .5em;
+}
+
+/* select option{
+    color:white;
+    background-color: #2B2C37;
+
+} */
+
+.TaskTitleError{
+    color: red;
+    margin-bottom: .5rem;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+
+@media (max-width:767px){
+    .AddTaskBlock{
+        width: 90%;
+    }
+}

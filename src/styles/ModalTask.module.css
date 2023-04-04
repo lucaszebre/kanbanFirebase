@@ -1,0 +1,102 @@
+.ModalTaskWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.171);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.light{
+    background-color: white;
+}
+.light .ModalTaskHeader h1{
+    color: black;
+}
+
+.light .ModalTaskH2{
+    color: black;
+}
+.light .SelectState{
+    background-color: white;
+    color: black;
+}
+.dark{
+    background-color: #2B2C37;
+}
+
+.dark .ModalTaskHeader h1{
+    color: white;
+}
+
+.dark .ModalTaskH2{
+    color: white;
+}
+
+.dark .SelectState{
+    background-color: #2B2C37;
+    color: white;
+}
+.ModalTaskDiv{
+    position: relative;
+    width: 480px;
+    overflow: overlay;
+    width: 480px;
+    border-radius: 6px;
+    max-height: 90%;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    z-index: 15;
+}
+
+.ModalTaskHeader h1{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.ModalTaskHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.TaskDescription{
+    color: gray;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: start;
+}
+
+.ModalTaskH2{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+
+.SelectState{
+    width: 100%;
+    height: 3rem;
+    border: gray 1px solid;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: .5em;
+}
+
+.ModalTaskEllipsis{
+    cursor: pointer;
+}

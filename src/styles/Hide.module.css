@@ -1,0 +1,41 @@
+.HideBlock{
+    width: 56px;
+    height: 46px;
+    position: fixed;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: 0;
+    bottom: 2rem;
+    background-color: #A8A4FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+}
+.HideContainer{
+    top: 96px;
+    position: fixed;
+    /* width: 250px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    left: 0;
+    /* background: red;
+    */
+    z-index: 10;
+}
+
+.HideBlock:hover{
+    background-color: #635FC7;
+}
+
+
+@media (max-width:767px){
+    .HideBlock{
+        display: none;
+    }
+}

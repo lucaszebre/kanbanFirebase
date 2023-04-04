@@ -1,0 +1,50 @@
+.TaskCardTitle{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.dark{
+    background-color: #2B2C37;
+
+}
+
+.dark .TaskCardContainer{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+
+}
+.dark .TaskCardTitle{
+    color: white;
+}
+.light{
+    background-color: white;
+
+}
+.light .TaskCardContainer{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+}
+.light .TaskCardTitle{
+    color: black;
+}
+
+.TaskCardTitle:hover{
+    color: #3F51B5;
+    cursor: pointer;
+}
+.TaskCardP{
+    color:gray;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.TaskCardContainer{
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.5em 1em 0.5em 1em;
+    width: 280px;
+    height: auto;
+    text-align: start;
+    margin-bottom: 1em;
+}

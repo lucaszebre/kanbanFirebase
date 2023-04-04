@@ -1,0 +1,164 @@
+.dark{
+    background-color: #2B2C37;
+}
+.dark .LabeladdBoard{
+    color: white;
+}
+.dark .InputAddBoard{
+    color: white;
+}
+.dark .AddBoardButton{
+    background-color: white;
+    color: #635FC7;
+}
+.dark .AddBoardTitle{
+    color: white;
+}
+.light{
+    background-color: white;
+}
+.light .LabeladdBoard{
+    color: black;
+}
+.light .InputAddBoard{
+    color: black;
+}
+
+
+.light .AddBoardButton{
+    background-color: aliceblue;
+    color: #635FC7;
+}
+.light .AddBoardTitle{
+    color: black;
+}
+.AddBoardWrapper{
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.AddBoardBlock{
+    width: 480px;
+    max-height: 90%;
+    height: auto;
+    
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    overflow: overlay;
+
+}
+
+.FormAddBoard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.LabeladdBoard{
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.InputAddBoard{
+    width: 100%;
+    border: gray 1px solid;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    height: 40px;
+}
+
+.InputAddBoard::placeholder{
+    color: gray;
+    font-size: 1rem;
+}
+
+.InputAddBoard:focus{
+    outline: none;
+}
+
+.AddBoardButton{
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.AddBoardSaveButton{
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #635FC7;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.AddBoardTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.errormessage{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: red;
+    font-size: 14px;
+}
+
+
+.imputWrapper{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.InputError {
+    border: 1px solid red;
+}
+
+.ErrorMessage {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+@media (max-width:767px){
+
+    .AddBoardBlock{
+        width: 90%;
+    }
+}

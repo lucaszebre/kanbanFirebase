@@ -1,0 +1,28 @@
+.modalAboutDiv{
+    top: 5rem;
+    right: 0rem;
+    position: absolute;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 2em;
+    border-radius: 1rem;
+    z-index: 315;
+    box-shadow: 0 10px 20px rgba(54,78,126,.25);
+}
+.dark{
+    background-color: #2B2C37;
+}
+.light{
+    background-color: white;
+}
+.EditModalAbout{
+    cursor: pointer;
+    color: gray;
+}
+
+.DeleteModalAbout{
+    cursor: pointer;
+    color: #ea5555
+}

@@ -1,0 +1,20 @@
+.SubtasksDiv{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    gap: 1em;
+}
+
+.light{
+    background-color: rgb(194, 223, 248);
+}
+
+
+.light{
+    background-color: #20212C;
+}
