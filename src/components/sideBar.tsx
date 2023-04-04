@@ -7,7 +7,7 @@ import styles from '../styles/Sidebar.module.css';
 import Image from 'next/image';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '@/config/firebase';
-import { Switch } from '@chakra-ui/react';
+import { Switch as MuiSwitch } from '@mui/material';
 import BoardCart from './boardCart';
 import { DataContext } from '@/contexts/datacontext';
 import { Board } from '@/types';
@@ -95,12 +95,12 @@ const Sidebar = () => {
           <div className={styles.SideBarBottom}>
             <div className={styles.ToggleBlock}>
               <Image src="/assets/icon-dark-theme.svg" alt="icon-dark-theme" width={18.33} height={18.33} />
-              <Switch
-                size="lg"
-                colorScheme="gray"
-                isChecked={theme !== 'dark'}
+              <MuiSwitch
+                size="medium"
+                color="default"
+                checked={theme !== 'dark'}
                 onChange={handleThemeToggle}
-          />
+              />
               <Image src="/assets/icon-light-theme.svg" alt="icon-light-theme" width={15} height={15} />
             
           </div>
