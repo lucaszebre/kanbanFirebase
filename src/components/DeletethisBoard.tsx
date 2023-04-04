@@ -1,4 +1,4 @@
-import styles from '../styles/DeletethisBoard.module.css';
+import styles from '@/styles/Deletethisboard.module.css';
 import { Opencontext } from '@/contexts/contextopen';
 import { useContext } from 'react';
 import { deleteDoc, doc } from 'firebase/firestore'; 
