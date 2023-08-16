@@ -6,7 +6,7 @@ import { Opencontext } from '@/contexts/contextopen';
 import styles from '@/styles/Sidebar.module.css';
 import Image from 'next/image';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/config/firebase';
+// import { db } from '@/config/firebase';
 import { Switch as MuiSwitch } from '@mui/material';
 import BoardCart from './boardCart';
 import { DataContext } from '@/contexts/datacontext';
@@ -18,8 +18,6 @@ const Sidebar = () => {
 
   const { isSidebarOpen, setIsSidebarOpen } = useContext(KanbanContext);  // state to toggle the sidebar 
   const { setAddBoard } = useContext(Opencontext);  // state to toggle the display of the Add Board components
-  const authInstance = getAuth();
-  const [user, loading, error] = useAuthState(authInstance);
   const {
     boards,
     setBoards,
@@ -34,24 +32,6 @@ const Sidebar = () => {
       setTheme(event.target.checked ? 'light' : 'dark');
     };
     
-  useEffect(() => {  // everytime the something happen in the data we get a new track from the firestore to stay update 
-    const fetchBoards = async () => {
-      if (!user) return;
-
-      const boardsCollection = collection(db, 'boards');
-      const q = query(boardsCollection, where('userId', '==', user.uid));
-      const querySnapshot = await getDocs(q);
-
-      const fetchedBoards: Board[] = [];
-      querySnapshot.forEach((doc) => {
-        fetchedBoards.push({ id: doc.id, name: doc.data().name, userId: user.uid, columns: [] });
-      });
-
-      setBoards(fetchedBoards);
-    };
-
-    fetchBoards();
-  }, [user, setBoards, boards,isMoving]);
 
 
   // function to handle the click on a board cart 

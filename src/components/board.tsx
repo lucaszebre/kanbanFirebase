@@ -5,7 +5,6 @@ import EmptyBoard from './emptyBoard';
 import { KanbanContext } from '@/contexts/sidebarcontext';
 import Header from './header';
 import styles from '../styles/Board.module.css';
-import { fetchColumnsFromFirestore } from '@/utils/fetchColumns';
 import { DataContext } from '@/contexts/datacontext';
 import { Opencontext } from '@/contexts/contextopen';  // get the context to toggle the board 
 import { getInitialWindowWidth } from '@/utils/GetInitialWidth';
@@ -19,13 +18,7 @@ const Board = () => {
     const { theme, setTheme } = useTheme();
 
     useEffect(() => {
-        const fetchColumnsAndUpdateContext = async () => {
-            if (currentBoardId) {
-                const columne = await fetchColumnsFromFirestore(currentBoardId);
-                setColumns(columne);
-            }
-        };
-        fetchColumnsAndUpdateContext();
+        
     }, [currentBoardId,isMoving, setColumns]);  // if the currentBoardId change we need to get the current columns of the board selected in the firestore
 
     useEffect(() => {

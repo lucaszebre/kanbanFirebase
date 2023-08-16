@@ -1,10 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { getAuth } from 'firebase/auth';
-import useAuthState from '@/components/useAuthState';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/config/firebase';
 import { Column, Subtask ,Board} from '@/types/index';
-import {fetchColumnsFromFirestore} from '@/utils/fetchColumns'
 type openedTaskType= {
     id: string;
     title: string;
@@ -46,8 +41,6 @@ export const DataProvider = (props: { children: React.ReactNode }) => {
     const [currentBoard,setCurrentBoard]= useState<Board>()
     const [currentBoardId, setCurrentBoardId] = useState<string>('');
     const [headerTitle, setHeaderTitle] = useState<string>('');
-    const authInstance = getAuth();
-    const [user, loading, error] = useAuthState(authInstance);
     const [isMoving,SetIsMoving] = useState(false)
     const [isCompleted,setIsCompleted] = useState(false)
     const [currentTaskId,SetCurrentTaskId]=React.useState<string>('')
@@ -62,22 +55,13 @@ export const DataProvider = (props: { children: React.ReactNode }) => {
 
     useEffect(() => {
         const fetchBoards = async () => {
-        if (!user) return;
+        
 
-        const boardsCollection = collection(db, 'boards');
-        const q = query(boardsCollection, where('userId', '==', user.uid));
-        const querySnapshot = await getDocs(q);
-
-        const fetchedBoards: Board[] = [];
-        querySnapshot.forEach((doc) => {
-            fetchedBoards.push({ id: doc.id, name: doc.data().name, userId: user.uid, columns: [] });
-        });
-
-        setBoards(fetchedBoards);
+        // setBoards();
         };
 
         fetchBoards();
-    }, [user]);
+    }, []);
 
     useEffect(() => {
         const savedHeaderTitle = localStorage.getItem('headerTitle');
@@ -102,15 +86,8 @@ export const DataProvider = (props: { children: React.ReactNode }) => {
             }, []);
 
     useEffect(() => {
-                const fetchColumns = async () => {
-                    if (currentBoardId) {
-                        const tempColumns = await fetchColumnsFromFirestore(currentBoardId);
-                        setColumns(tempColumns);
-                        
-                    }
-                };
+                
             
-            fetchColumns();
             
     }, [currentBoardId,columns,isMoving]);
 

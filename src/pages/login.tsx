@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
-import { auth, provider, db } from  '@/config/firebase'
-import { signInWithPopup } from 'firebase/auth';
-import { collection, addDoc, setDoc, doc, query, where, getDocs } from "firebase/firestore";
+import React, { useContext,useState } from 'react';
 import styles from '@/styles/Login.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-
-
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { SchemaLogin } from '@/types';
+import Link from 'next/link';
 interface User {
     uid: string;
     displayName: string | null;
@@ -16,82 +15,70 @@ const Login: React.FC = () => {
 
     const router = useRouter();
 
-    const createSubcollection = async (userId: string, displayName: string) => {
-        const userRef = doc(db, 'users', userId);
-        const displayNameRef = collection(userRef, displayName);
-        
-        try {
-            await setDoc(doc(displayNameRef, 'exampleDoc'), { exampleData: 'Hello, world!' });
-        } catch (error) {
-            console.error('Error creating subcollection:', error);
-        }
-    };
+    const {register,handleSubmit,watch,formState: { errors },} = useForm({resolver: zodResolver(SchemaLogin),});
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-    const createInitialFirestoreStructure = async (userId: string) => {
-        try {
-            // Check if the user already has boards
-            const boardsCollection = collection(db, "boards");
-            const q = query(boardsCollection, where("userId", "==", userId));
-            const querySnapshot = await getDocs(q);
-        
-            // If no boards exist for the user, create the initial structure
-            if (querySnapshot.empty) {
-            // Create a new board document with a generated ID
-            const newBoardDoc = await addDoc(boardsCollection, {
-                name: "New Board",
-                userId: userId
-            });
-        
-            // Create columns subcollection with a few example columns
-            const columnsCollection = collection(newBoardDoc, "columns");
-            const column1 = await addDoc(columnsCollection, { name: "Todo" });
-            const column2 = await addDoc(columnsCollection, { name: "Doing" });
-            const column3 = await addDoc(columnsCollection, { name: "Done" });
-        
-            // Create tasks subcollection with an example task
-            const tasksCollection = collection(newBoardDoc, "tasks");
-            await addDoc(tasksCollection, {
-                title: "Example Task",
-                description: "",
-                status: "Todo",
-                columnId: column1.id,
-                subtasks: [
-                { title: "Subtask 1", isCompleted: false },
-                { title: "Subtask 2", isCompleted: false }
-                ]
-            });
-            }
-        } catch (error) {
-            console.error("Error creating initial Firestore structure:", error);
-        }
-    };
+    
 
-    const signInWithPopupGoogle = () => {
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                localStorage.setItem("IsAuth", JSON.stringify(true));
-        
-                // Create initial Firestore structure for the logged-in user
-                createInitialFirestoreStructure(result.user.uid);
-        
-                // Redirect the user to the main component
-                router.push('/');
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
         
 
     return (
-        <div className={styles.loginDiv}>
-            <h1 className={styles.loginTitle}>Sign up with your Google account</h1>
-            <button className={styles.loginWithGoogleBtn} 
-                onClick={()=>signInWithPopupGoogle()}
-            >
-                <Image src='/assets/icons-google.svg' alt="Google logo" width={48} height={48}  /> Sign in with Google
-            </button>
+        <>
+        <div className={styles.LoginContainer}>
+            <div className={styles.LoginWrapper}>
+                <div className={styles.LoginImageWrapper}>
+                    <div className={styles.LoginImage}>
+                        <Image  src="/assets/images/logo-devlinks-large.svg" alt="devlink-logo" fill />
+                    </div>
+                </div>
+                
+                <form onSubmit={handleSubmit(()=>{
+                    const watched=watch()
+                    setEmail(watched.email)
+                    setPassword(watched.password)
+                    // signInWithEmail()
+                })} className={styles.LoginForm} action="">
+                    <h1 className={styles.LoginH1}>
+                        Login
+                    </h1>
+                    
+                    <p className={styles.LoginDescription}>
+                    Add your details below to get back into the app
+                    </p>
+                    <label style={errors.email ? { color: '#EC5757' } : {}} className={styles.LoginLabel} htmlFor="">
+                        Email adress
+                    </label>
+                    <div  className={styles.LoginInputWrapper}>
+                        <Image className={styles.LoginImageInput} src='/assets/images/icon-email.svg' alt='icon-email' height={16} width={16} />
+                        <input  style={errors.email ? { border: '#EC5757 1px solid' } : {}}   {...register('email')} className={styles.LoginInput} type="text" placeholder='e.g. lucasbeaugosse@email.com' />
+                        {errors && errors.email && <p className={styles.LoginError}>{errors.email.message?.toString()}</p>}
+                    </div>
+                    
+                    <label style={errors.password ? { color: '#EC5757' } : {}}  className={styles.LoginLabel} htmlFor="">
+                        Password
+                    </label>
+            
+                    <div className={styles.LoginInputWrapper}>
+                        <Image  className={styles.LoginImageInput} src='/assets/images/icon-password.svg' alt='icon-password' height={16} width={16} />
+                        <input   style={errors.password ? { border: '#EC5757 1px solid' } : {}}    {...register('password')} className={styles.LoginInput}  placeholder='Enter your password' type = "password" />
+                        {(errors && errors.password && <p className={styles.LoginError}>{errors.password.message?.toString()}</p>) || (errors && errors.message && <p className={styles.LoginError}>Invalid password</p>) }
+                    </div>
+                    <button type='submit' className={styles.LoginButton}>Login</button>
+                    <div className={styles.LoginDiv}>
+                        Dont have a account
+                        <Link  href='/register'className={styles.LoginNoAccount}>
+                            Create account
+                        </Link>
+                    </div>
+                    <div>
+                    
+                    </div>
+                    
+                </form>
+            </div>
         </div>
+    </>
     );
 };
 

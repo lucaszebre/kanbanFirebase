@@ -1,12 +1,10 @@
 import { useState,useContext, useEffect } from 'react';
-import { getAuth } from 'firebase/auth';
 import useAuthState from './useAuthState';
 import { KanbanContext } from '@/contexts/sidebarcontext';
 import { Opencontext } from '@/contexts/contextopen';
 import styles from '../styles/SidebarMobile.module.css';
 import Image from 'next/image';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/config/firebase';
 import { Switch } from '@chakra-ui/react';
 import BoardCart from './boardCart';
 import { DataContext } from '@/contexts/datacontext';
@@ -21,8 +19,6 @@ const { theme, setTheme } = useTheme();
 const { isSidebarMobile, setIsSidebarMobile } = useContext(KanbanContext);  // state to toggle the sidebar 
 const { setAddBoard } = useContext(Opencontext);  // state to toggle the display of the Add Board components
 const [windowWidth, setWindowWidth] = useState(getInitialWindowWidth()); // Update the useState call
-const authInstance = getAuth();
-const [user, loading, error] = useAuthState(authInstance);
 
 const {
     boards,
@@ -57,23 +53,9 @@ const {
 
     
   useEffect(() => {  // everytime the something happen in the data we get a new track from the firestore to stay update 
-    const fetchBoards = async () => {
-        if (!user) return;
+    
 
-        const boardsCollection = collection(db, 'boards');
-        const q = query(boardsCollection, where('userId', '==', user.uid));
-        const querySnapshot = await getDocs(q);
-
-        const fetchedBoards: Board[] = [];
-        querySnapshot.forEach((doc) => {
-            fetchedBoards.push({ id: doc.id, name: doc.data().name, userId: user.uid, columns: [] });
-        });
-
-        setBoards(fetchedBoards);
-    };
-
-    fetchBoards();
-    }, [user, setBoards, boards,isMoving]);
+    }, []);
 
     const handleThemeToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
         setTheme(event.target.checked ? 'light' : 'dark');

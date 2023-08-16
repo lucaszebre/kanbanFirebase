@@ -47,3 +47,335 @@
         font-size: 1rem;
     }
 }
+
+
+.LoginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent !important;
+  }
+  
+  .LoginError{
+    color: red;
+    font-size: .7rem;
+    position: absolute;
+    right: 10px;
+    top: 1rem;
+  }
+  .LoginImage{
+    height: 40px;
+    width: 500px;
+    position: relative;
+  }
+  
+  .LoginWrapper{
+      max-width: 29.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3.1875rem;
+      justify-content: center;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      
+    }
+      
+  .LoginForm{
+      -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1); 
+      box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
+      display: flex;
+      padding: 2.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      align-self: stretch;
+      background-color: white;
+      border-radius: 1rem;
+      width: 100%;
+      border: 1px solid #e5e7eb;
+  }
+  
+  .LoginH1{
+      color: var(--dark-grey, #333);
+      /* Heading M */
+      font-family: Instrument Sans;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+  }
+  
+  .LoginDescription{
+      color: var(--grey, #737373);
+      /* Body M */
+      font-family: Instrument Sans;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+  }
+  .RowForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .LoginLabel{
+      color: var(--dark-grey, #333);
+      /* Body S */
+      font-family: Instrument Sans;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+  }
+  
+  .LoginInputWrapper{
+      position: relative;
+      height: 3rem;
+      width: 100%;
+  }
+  .LoginInput{
+      padding-left: 2em;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      gap: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--borders, #D9D9D9);
+      background: var(--white, #FFF)
+  }
+  
+  .LoginInput::placeholder {
+      color: var(--dark-grey, #333);
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 150%;
+      opacity: .5;
+    }
+    
+    /* For modern browsers */
+    .LoginInput:-moz-placeholder {
+      position: relative;
+      left: 3rem;
+    }
+    
+    /* For Internet Explorer 10-11 */
+    .LoginInput::-ms-input-placeholder {
+      position: relative;
+      left: 3rem;
+    }
+    
+    /* For Microsoft Edge */
+    .LoginInput::-ms-input-placeholder {
+      position: relative;
+      left: 3rem;
+    }
+    
+    /* For WebKit-based browsers */
+    .LoginInput::-webkit-input-placeholder {
+      position: relative;
+      left: 3rem;
+    }
+    
+    /* For Opera */
+    .LoginInput::-o-input-placeholder {
+      position: relative;
+      left: 3rem;
+    }
+  
+    /* For Mozilla Firefox */
+  @-moz-document url-prefix() {
+      .LoginInput::placeholder {
+        position: relative;
+        left: 3rem;
+      }
+    }
+  
+  .LoginButton{
+      display: flex;
+      padding: 1.6rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      align-self: stretch;
+      border-radius: 0.5rem;
+      background: var(--purple, #633CFF);
+      height: 3rem;
+      width: 100%;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
+  
+  .LoginButton:active{
+    background: var(--purple-hover-color, #BEADFF);
+  /* active-selection */
+  box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
+  }
+  
+  .LoginDiv{
+      display: flex;
+      align-self: center;
+      color: #737373;
+      text-align: center;
+      gap: .5rem;
+      /* Body M */
+      font-family: Instrument Sans;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+  }
+  
+  .LoginNoAccount{
+      color: #633CFF;
+  }
+  
+  .LoginImageInput{
+      position: absolute;
+      left: 10px;
+      top: 1rem;
+  }
+  
+  .RowForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .LoginGithub{
+    transition: background-color .3s, box-shadow .3s;
+    cursor: pointer;
+    padding: 12px 16px 12px 42px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    
+    background-image: url('/public/assets/github.svg');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+    
+    .loginwithgooglebtn:hover {
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+    }
+    
+    .LoginGithub:active {
+      background-color: #eeeeee;
+    }
+    
+    .LoginGithub:focus {
+      outline: none;
+      box-shadow: 
+        0 -1px 0 rgba(0, 0, 0, .04),
+        0 2px 4px rgba(0, 0, 0, .25),
+        0 0 0 3px #c8dafc;
+    }
+    
+    .LoginGithub:disabled {
+      filter: grayscale(100%);
+      background-color: #ebebeb;
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+      cursor: not-allowed;
+    }
+  }
+  
+  .loginwithgooglebtn {
+    transition: background-color .3s, box-shadow .3s;
+    cursor: pointer;
+    padding: 12px 16px 12px 42px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+    
+    .loginwithgooglebtn:hover {
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+    }
+    
+    .loginwithgooglebtn:active {
+      background-color: #eeeeee;
+    }
+    
+    .loginwithgooglebtn:focus {
+      outline: none;
+      box-shadow: 
+        0 -1px 0 rgba(0, 0, 0, .04),
+        0 2px 4px rgba(0, 0, 0, .25),
+        0 0 0 3px #c8dafc;
+    }
+    
+    .loginwithgooglebtn:disabled {
+      filter: grayscale(100%);
+      background-color: #ebebeb;
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+      cursor: not-allowed;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @media (max-width:500px){
+  
+      .LoginWrapper{
+          background-color: white;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+      }
+      .LoginImage{
+        height: 40px;
+        width: 200px;
+        position: relative;
+      }
+      .LoginImageWrapper{
+        align-items: start;
+        padding: 2rem;
+        display: flex;
+        justify-content: start;
+        width: 100%;
+      }
+      .LoginForm{
+          box-shadow: none;
+          gap: .5rem;
+      }
+      .LoginDiv{
+        flex-direction: column;
+      }
+  
+  
+  }
+  
+  @media (max-width:510px){
+    .LoginForm{
+      border: none;
+    }
+   
+  }

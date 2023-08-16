@@ -23,7 +23,6 @@ export default function Header() {
 
 
     const router = useRouter(); 
-    const auth = getAuth();
         
 
         
@@ -61,11 +60,11 @@ export default function Header() {
                         + Add New Task
                     </button>
                     <button
-                            onClick={()=>{signOut(auth).then(() => {
-                            router.push('/login');
-                        }).catch((error) => {
-                            console.error(error)
-                        });}}
+                        //     onClick={()=>{signOut(auth).then(() => {
+                        //     router.push('/login');
+                        // }).catch((error) => {
+                        //     console.error(error)
+                        // });}}
                         className={styles.LogoutButton}
                     >
                         Logout
