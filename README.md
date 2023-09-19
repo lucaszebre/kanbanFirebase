@@ -4,7 +4,9 @@
 
 ## Overview
 
-The Kanban Task Manager is a web application built with Next.js, Nest.js, and PostgreSQL that helps you efficiently manage your tasks using the Kanban methodology. It provides a visual way to organize, track, and prioritize your work, making it easier to collaborate with your team and stay organized.
+The Kanban Task Manager is a web application built with Next.js and Firebase that helps you efficiently manage your tasks using the Kanban methodology. It provides a visual way to organize, track, and prioritize your work, making it easier to collaborate with your team and stay organized.
+
+
 
 ## Features
 
@@ -39,14 +41,13 @@ To get started with the Kanban Task Manager, follow these steps:
 
 ### Technologies Used
 
-    Frontend: Next.js, React, React Query, Chakra UI, TypeScript
-    Backend: Nest.js, PostgreSQL, TypeORM, JWT Authentication
-    Styling: CSS Modules
-    State Management: React Query
-    Drag and Drop: react-beautiful-dnd
-    User Authentication: JWT (JSON Web Tokens)
-    Contributing
-    Contributions are welcome! If you'd like to contribute to this project, please follow our Contributing Guidelines.
+       Frontend: Next.js, React, React Query, Chakra UI, TypeScript
+      Backend: Firebase (Authentication and Realtime Database)
+      Styling: CSS Modules
+      State Management: React Query
+      Drag and Drop: react-beautiful-dnd
+      User Authentication: Firebase Authentication
+      Database: Firebase Realtime Database
 
 ### License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
