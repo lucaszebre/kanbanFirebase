@@ -1,38 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kanban Task Manager
+
+![App Screenshot](/public/assets/Kanban.jpg)
+
+## Overview
+
+The Kanban Task Manager is a web application built with Next.js, Nest.js, and PostgreSQL that helps you efficiently manage your tasks using the Kanban methodology. It provides a visual way to organize, track, and prioritize your work, making it easier to collaborate with your team and stay organized.
+
+## Features
+
+- **Kanban Boards:** Create and manage multiple Kanban boards for different projects or workflows.
+- **Columns and Tasks:** Each board consists of columns representing different stages of your workflow (e.g., To Do, In Progress, Done), and you can add tasks to these columns.
+- **Drag and Drop:** Easily move tasks between columns by dragging and dropping them.
+- **Subtasks:** Break down tasks into smaller subtasks to manage them more effectively.
+- **Task Details:** Add descriptions and additional information to your tasks.
+- **User Authentication:** Securely sign in and manage your tasks with user accounts.
+- **Responsive Design:** Access and manage your tasks on various devices, including desktop and mobile.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the Kanban Task Manager, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. **Clone the Repository:** Clone this repository to your local machine.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/lucaszebre/kanbanwithapi
+   
+2.  **Install Dependencies:** Navigate to the project directory and install the required dependencies.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+   cd kanban-task-manager
+    npm install
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. **Start the Application:** Start the frontend application.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    npm run dev
 
-## Learn More
+4. **Acces the App** Open your web browser and access the app at http://localhost:3000.
 
-To learn more about Next.js, take a look at the following resources:
+### Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Frontend: Next.js, React, React Query, Chakra UI, TypeScript
+    Backend: Nest.js, PostgreSQL, TypeORM, JWT Authentication
+    Styling: CSS Modules
+    State Management: React Query
+    Drag and Drop: react-beautiful-dnd
+    User Authentication: JWT (JSON Web Tokens)
+    Contributing
+    Contributions are welcome! If you'd like to contribute to this project, please follow our Contributing Guidelines.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Acknowledgments
+Special thanks to the open-source community for their amazing contributions and libraries.
+Inspired by the Kanban methodology for project management.
+Happy task managing!
