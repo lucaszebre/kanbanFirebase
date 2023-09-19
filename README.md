@@ -1,5 +1,5 @@
 # Kanban Task Manager
-![App Screenshot](/public/assets/Kanban.jpg)
+![App Screenshot](/Kanban.jpg)
 
 ## Overview
 
