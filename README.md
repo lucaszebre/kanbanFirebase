@@ -1,5 +1,4 @@
 # Kanban Task Manager
-C:\Users\Kihur\Documents\Port-folio\Portfolio\public\assets\Kanban.jpg
 ![App Screenshot](/public/assets/Kanban.jpg)
 
 ## Overview
@@ -24,7 +23,7 @@ To get started with the Kanban Task Manager, follow these steps:
 1. **Clone the Repository:** Clone this repository to your local machine.
 
    ```bash
-   git clone https://github.com/lucaszebre/kanbanwithapi
+   git clone https://github.com/lucaszebre/kanbanFirebase
    
 2.  **Install Dependencies:** Navigate to the project directory and install the required dependencies.
 
@@ -40,7 +39,7 @@ To get started with the Kanban Task Manager, follow these steps:
 
 ### Technologies Used
 
-       Frontend: Next.js, React, React Query, Chakra UI, TypeScript
+       Frontend: Next.js, React, Chakra UI, TypeScript
       Backend: Firebase (Authentication and Realtime Database)
       Styling: CSS Modules
       State Management: Context Api
