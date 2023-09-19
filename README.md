@@ -1,5 +1,5 @@
 # Kanban Task Manager
-
+C:\Users\Kihur\Documents\Port-folio\Portfolio\public\assets\Kanban.jpg
 ![App Screenshot](/public/assets/Kanban.jpg)
 
 ## Overview
