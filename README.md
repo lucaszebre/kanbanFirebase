@@ -12,7 +12,6 @@ The Kanban Task Manager is a web application built with Next.js and Firebase tha
 
 - **Kanban Boards:** Create and manage multiple Kanban boards for different projects or workflows.
 - **Columns and Tasks:** Each board consists of columns representing different stages of your workflow (e.g., To Do, In Progress, Done), and you can add tasks to these columns.
-- **Drag and Drop:** Easily move tasks between columns by dragging and dropping them.
 - **Subtasks:** Break down tasks into smaller subtasks to manage them more effectively.
 - **Task Details:** Add descriptions and additional information to your tasks.
 - **User Authentication:** Securely sign in and manage your tasks with user accounts.
@@ -44,8 +43,7 @@ To get started with the Kanban Task Manager, follow these steps:
        Frontend: Next.js, React, React Query, Chakra UI, TypeScript
       Backend: Firebase (Authentication and Realtime Database)
       Styling: CSS Modules
-      State Management: React Query
-      Drag and Drop: react-beautiful-dnd
+      State Management: Context Api
       User Authentication: Firebase Authentication
       Database: Firebase Realtime Database
 
